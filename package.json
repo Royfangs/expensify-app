@@ -4,7 +4,6 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "server": "live-server public/",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
@@ -17,12 +16,8 @@
   "dependencies": {
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
-    "enzyme": "^3.0.0",
-    "enzyme-adapter-react-16": "^1.0.0",
-    "enzyme-to-json": "^3.0.1",
     "express": "^4.15.4",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "jest": "^23.6.0",
     "moment": "^2.18.1",
     "normalize.css": "^8.0.1",
     "raf": "^3.3.2",
@@ -33,7 +28,6 @@
     "react-modal": "^3.6.1",
     "react-redux": "^5.0.5",
     "react-router-dom": "^4.2.2",
-    "react-test-renderer": "^16.0.0",
     "redux": "^3.7.2",
     "uuid": "^3.3.2",
     "validator": "^10.9.0"
@@ -51,6 +45,11 @@
     "style-loader": "^0.23.1",
     "webpack": "^4.26.1",
     "webpack-cli": "^3.1.2",
+    "enzyme": "^3.0.0",
+    "enzyme-adapter-react-16": "^1.0.0",
+    "enzyme-to-json": "^3.0.1",
+    "jest": "^23.6.0",
+    "react-test-renderer": "^16.0.0",
     "webpack-dev-server": "^3.1.10"
   }
 }

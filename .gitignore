@@ -1,6 +1,3 @@
 node_modules/
 .vscode/
-pubilc/bundle.js
-pubilc/bundle.js.map
-pubilc/styles.css
-pubilc/styles.css.map
+pubilc/dist/
