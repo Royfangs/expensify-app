@@ -3,12 +3,9 @@ import { connect } from 'react-redux';
 import ExpenseForm from './ExpenseForm';
 import { startEditExpense, startRemoveExpense } from '../actions/expenses';
 
-export class EditExpensePage  extends React.Component {
+export class EditExpensePage extends React.Component {
   onSubmit = (expense) => {
-    // console.log(expense);
-    //1. dispatch the action to edit the expense
     this.props.startEditExpense(this.props.expense.id, expense);
-    //2. Redirect to the dashboard
     this.props.history.push('/');
   };
 
@@ -36,12 +33,9 @@ export class EditExpensePage  extends React.Component {
   }
 };
 
-const mapStateToProps = (state, props) => {
-  return {
-    //using target ID to search through store state
-    expense: state.expenses.find((expense) => expense.id === props.match.params.id)
-  };
-};
+const mapStateToProps = (state, props) => ({
+  expense: state.expenses.find((expense) => expense.id === props.match.params.id)
+});
 
 const mapDispatchToProps = (dispatch, props) => ({
   startEditExpense: (id, expense) => dispatch(startEditExpense(id, expense)),
